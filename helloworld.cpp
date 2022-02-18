@@ -9,7 +9,6 @@ cin >> choose;
 if (choose=1)
 	cout << "helloworld";
 
-
 return 0;
 
 
