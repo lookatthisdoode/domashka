@@ -45,12 +45,12 @@ int main() {
 
 	if (direction == "L" || direction == "l") {
 		cout << "Sdvig (Vlevo):\n\n";
-		cout << "Na " << size; 
+		cout << "Na " << size<< endl; 
 		counter = 0 + size;
 	}
 	else if (direction == "R" || direction == "r") {
 		cout << "Sgvig (Vpravo):\n\n";
-		cout << "Na " << size; 
+		cout << "Na " << size<<endl; 
 		counter = (stroki * stolbci) - size;
 	}
 
