@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0047)file://smallchungus/d/helloworld/menuitems.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+<!-- <script src="script.js"></script> -->
+
+<title>Recipe Book</title>
+</head>
+
+<body>
+<div class="header">
+<div class="wrapper">
+<!-- <img src="logo2.png"></img> -->
+</div>
+</div>
+<div class="menu">
+<div class="wrapper">
+<ul>
+<li>
+<button id="starters" onclick="starters()">Закуски</button>
+</li>
+<li>
+<button id="mainCourse">Основные </button>
+</li>
+<li>
+<button id="drinks">Напитки </button>
+</li>
+<li>
+<button onclick="closeall()"> Cкрыть все </button>
+</li>
+</ul>
+</div>
+</div>
+<!-- меню закончилось -->
+<div class="content">
+
+<div class="wrapper">
+<div class="item" id="kale">
+KALE N PEPPER<br>
+kale<br>
+roasted smoked pepper<br>
+hazelnut<br>
+pears<br>
+<span class="info" onclick="plum()">plum dressing</span><br>
+</div>
+
+<div class="item">
+<ul>
+<li>SEARED TUNA
+</li>
+<li>tuna</li>
+<li>rocket leaves</li>
+<li>frisee</li>
+<li>affilia</li>
+<li>sorrel</li>
+<li>lemon segments</li>
+<li><span class="info" onclick="pesto()">pesto dressing</span></li>
+<li><span class="info" onclick="caponata()">caponata</span></li>
+</ul>
+</div>
+<div class="item">
+<ul>
+<li>TOMATO SALAD</li>
+<li>heirloom tomato</li>
+<li>semidryed tomato</li>
+<li>shallots</li>
+<li>sherry vinegar</li>
+<li>shaved red onion</li>
+<li>tarragon leaves</li>
+<li>basil</li>
+<li>feta cheese</li>
+<li>garlic</li>
+<li>sorrel leaves</li>
+<li>chives</li>
+<li>olive oil croutons</li>
+<li><span class="info" onclick="tomatodress()">dressing</span></li>
+</ul>
+</div>
+<div class="item">
+<ul>
+<li>CRAB CAKE</li>
+<li>crab meat</li>
+<li>eggs</li>
+<li>bread crumbs</li>
+<li>chives</li>
+<li>shallots</li>
+<li>lemon zest</li>
+<li>lemon juice</li>
+<li>belgium mayo</li>
+<li><span class="info" onclick="bavarois()">bavarois</span></li>
+</ul>
+</div>
+<div class="item">
+<ul>
+<li>SOFT EGG<br></li>
+<li>poached egg, fried for 4 minutes</li>
+<li>blanched green asparagus</li>
+<li>blanched white asparagus<br>			
+</li><li>arugula leaves</li>
+<li>parmesam shavings</li>
+<li>bread crumbs</li>
+<li><span class="info" onclick="citrusbutter()">citrus butter</span></li>
+</ul>
+</div>
+<div class="item">
+ENDIVE SALAD<br>
+<ul>
+<li>baby gem<br></li>
+<li>yellow endive<br></li>
+<li>red endive<br></li>
+<li>walnut<br></li>
+<li>gala apple<br></li>
+<li>blue cheese<br></li>
+<li>parsley<br></li>
+<li>belgium mayonnaise<br></li>
+<li><span class="info" onclick="herbdressing()">herb vinaigrette</span><br></li>
+</ul>
+</div>
+<div class="item">
+SALMON TARTARE<br>
+salmon, diced<br>				
+tomato concasse<br>				
+shallot<br>				
+lemon zest<br>				
+fresh horseradish, grated<br>				
+olive oil<br>				
+lemon juice<br>				
+chopped chives<br>				
+butter crouton<br>				
+chervil leaves<br>				
+radish, sliced<br>				
+affilia cress<br>				
+multigrain toast			
+</div>
+<div class="item">
+OCTOPUS SALAD<br>
+octopus, poached<br>
+fingerling potato, confit<br>
+chorizo<br>
+arugula<br>
+<span class="info" onclick="herbdressing()">herb dressing</span><br>	
+smoked onion mayo<br>
+orange segment, marinated<br>
+squid ink chips<br>
+sorrel leaves<br>
+affilia cress<br>
+radish slices
+</div>
+
+<div class="item">
+BEEF TARTARE<br>
+beef, diced<br>				
+<span class="info" onclick="dijonnaise()">dijonaiise</span><br>	
+belgium mayonnaise<br>
+chopped chives<br>
+olive oil<br>
+cornichon, halved<br>
+pickled pearl onion pedals<br>
+caperberry, sliced<br>
+affilia cress<br>
+multigrain toast
+</div>
+
+<div class="item">
+    <div class="foodtitle">
+        <div class="info" onclick="pork()">ZOE`S SPECIAL PORK</div><br>
+    </div>
+    pork sliced . 500-700 gr <br>
+    cornstarch . 3 tbsp<br>
+    water . 6 tbsp<br>
+    fish sauce . 3 tbsp<br>
+    sugar . 1.5 tbsp<br>
+   
+</div>
+
+</div>
+</div>
+
+<!-- content ends -->
+<div class="footer">
+<div class="wrapper">
+    <p class="credits"> 2017-2022 Радченко Андрей</p>
+</div>
+</div>
+
+<div id="okno" style="z-index: -100; opacity: 0; left: 75%;">
+    <div class="controls">
+        <div id="cross" onclick="closing()">
+            x
+        </div>
+        <div id="green-cross" onclick="move()">&lt;</div>
+    </div>
+    <div id="ingridients"><h4>TOMATO SALAD<br>DRESSING</h4>sherry vinegar <br> sugar</div>
+</div>
+
+<style>
+ul, li, body {
+	margin: 0;
+	padding: 0;
+    font-family: Arial, Sans-serif;
+	list-style-type: none;
+	z-index: 1;
+
+}
+
+body .header{
+	background-color: darkseagreen;
+     overflow:auto;
+	
+}
+
+.wrapper {
+	width: 90%;
+	height: inherit;
+	background-color: inherit;
+	margin: 0 auto;
+	color: inherit;
+	
+	
+}
+img {
+	width: 200px;
+	/* z-index: 3; */
+}
+.menu {
+	min-height: 50px;
+	background-color: darkolivegreen;
+}
+
+.content {
+	position: relative;
+	min-height: 500px;
+	background-color: darkseagreen;
+	overflow: hidden;
+	padding: 50px 0;
+
+}
+.footer {
+	background-color: darkolivegreen;
+    min-height: 100px;
+}
+.credits{
+    color: grey;
+    text-align: left;
+	font-size: 20px;
+    padding:30px 0 0 10px;
+}
+.controls {
+    display:inline-flex;
+    cursor:pointer;
+    text-align: center;
+    color : white;
+}
+
+.menu .wrapper ul li {
+	display: inline;
+	padding-right: 10px;
+	line-height: 50px;
+}
+button {
+	background-color: inherit;
+	color: white;
+	border: 0;
+}
+h4 {
+    margin:0px 0px 0px 0px;
+    color:darkolivegreen;
+}
+
+
+#okno {
+	min-width:20%;
+	min-height: 100px;
+	margin: auto auto;
+	position: fixed;
+	top: 10%;
+	left: 1%;
+	
+	background-color: white;
+	border-radius: 20px;
+	padding: 7px;
+	opacity: 0;
+	transition-duration: 1s;
+	z-index: -100;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#ingridients {
+	color: gray;
+	font-size: 30px;
+	text-align: left;
+    margin:0px 10px 10px 10px;
+}
+
+#cross, #green-cross {
+	background-color: darkred;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	right: 0px;
+	top: 0px;
+    margin:10px 0px 15px 10px;
+    opacity: 0.5;
+	border-radius: 20px 20px 20px 20px;
+}
+#green-cross {
+	background-color: green;
+}
+#cross:hover, #green-cross:hover {
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+.info {
+	cursor: pointer; 
+    color:sienna;
+    padding:5px 0 0 0;
+}
+.item {
+	position: relative;
+	background-color: white;
+	width: 15%;
+	height: 250px;
+	color: rgb(88, 88, 88);
+	text-align: center;
+	font-size: 1vw;
+	float: left;
+	margin: 7px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    overflow: auto;
+    transition-duration: 0.4s;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    @media screen and (max-width: 1000px) {
+        .item {
+            width: 25%;
+            font-size: 2vw;
+            transition-duration: 0.4s;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .item {
+            transition-duration: 0.4s;
+            font-size: 7vw;
+            width: 90%;
+        }
+
+        #okno {
+            max-width: 90%;
+            max-height: 70%;
+            top: 5%;
+            left: 5%;
+        }
+        .foodtitle {
+            height: 20%;
+        }
+    }
+	
+
+</style>
+
+<script>
+var contents = document.querySelector(".content");
+var dressings = [
+"<h4>PESTO DRESSING</h4>basil </br> olive oil </br> garlic </br> croutons </br> mayo",
+"<h4>CAPONATA</h4>eggplant </br> smoked bell pepper </br> tomato </br> celery </br> white balsamic </br> olives </br> basil </br> parsley </br> white sherry vinegar",
+"<h4>PLUM DRESSING</h4>plum </br> white wine vinegar </br> honey </br> sugar </br> grainy mustard",
+"<h4>TOMATO SALAD</br>DRESSING</h4>sherry vinegar </br> sugar",
+"<h4>BAVAROIS</h4>shervil </br> tarragon </br> parsley </br> egg yolk </br> cream </br> jellatine",
+"<h4>HERB DRESSING</h4>dill </br> thyme </br> parsley </br> chives </br> honey </br> sherry vinegar </br> corn oil",
+"<h4>DIJONAISE</h4>dijon mustard </br> gherkins </br> pickled onion </br> shallots </br> capers </br> ketchup</br>WC sauce </br> tabasco</br> pickled liquid",
+"<h4>INSTRUCTIONS</h4>mix cornstarch and water</br>put pork to mixture then to pan</br>fry untill crisp</br>set aside</br>mix fish sauce and sugar</br>heat it up untill thick and turn off</br>put pork in there and mix well</br>enjoy!",
+];
+   
+var sostav = document.getElementById("ingridients");
+var okno = document.getElementById("okno");
+var right = false;
+
+function move() {
+    if (right == false) {
+    okno.style.left = "75%";
+    document.getElementById("green-cross").innerHTML = "<";
+    right = true;
+    }
+    else if (right == true){
+    okno.style.left = "5%";
+    document.getElementById("green-cross").innerHTML = ">";
+    right = false;
+    }
+    }
+
+function closing() {
+	document.getElementById("okno").style.opacity = "0";
+	document.getElementById("okno").style.zIndex = "-100";
+	
+};
+
+function appear(){
+    document.getElementById("okno").style.zIndex = "100";
+    document.getElementById("okno").style.opacity = "1";
+    };
+
+
+function pesto() {
+	sostav.innerHTML = dressings[0];
+	appear();
+	
+};
+
+function pork() {
+	sostav.innerHTML = dressings[7];
+	appear();
+	
+};
+function caponata() {
+	sostav.innerHTML = dressings[1];
+	appear();
+	
+	
+};
+function plum() {
+	sostav.innerHTML = dressings[2];
+	appear();
+	
+};
+function tomatodress() {
+	sostav.innerHTML = dressings[3];
+	appear();
+	
+};
+
+function bavarois() {
+	sostav.innerHTML = dressings[4];
+	appear();
+	
+};
+
+
+function herbdressing() {
+	sostav.innerHTML = dressings[5];
+	appear();
+	
+};
+
+
+function dijonnaise() {
+	sostav.innerHTML = dressings[6];
+	appear();
+};
+
+function closeall() {
+	contents.style.display = "none";
+
+};
+
+function starters() {
+	contents.style.display = "block";
+	contents.style.opacity = "1";
+	contents.style.zIndex = "50";
+};
+
+
+
+
+
+
+
+</script>
+</body></html>
